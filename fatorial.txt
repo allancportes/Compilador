@@ -1,0 +1,30 @@
+
+int input(void)
+{
+}
+
+void output(int x)
+{
+}
+int fat(int n) {
+	
+    if (n < 2){
+        return 1;
+    }
+    else{
+        return fat(n-1)*n;
+    }
+}
+
+
+void main (void){
+  int i;
+	int x;
+	int y;
+	int z;
+	
+	x = input();
+	z = fat(x);
+	output(z);
+
+}

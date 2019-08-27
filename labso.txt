@@ -1,0 +1,177 @@
+int vet[ 4 ];
+
+int input(void)
+{
+}
+
+void output(int x)
+{
+}
+
+void arit(void) {
+	int z;
+	int x;
+	int y;
+
+	x = input();
+	y = input();
+
+	z = x+y;
+	output(z);
+	z = x-y;
+	output(z);
+	z = x*y;
+	output(z);
+	z = x/y;
+	output(z);
+
+}
+
+void comp(void) {
+	int z;
+	int x;
+	int y;
+
+	x = input();
+	y = input();
+
+	if(x > y) {
+		output(1);
+	} else {
+		output(2);
+	}
+}
+
+void media(void) {
+	int z;
+	int x;
+	int y;
+
+	x = input();
+	y = input();
+	z = (x+y)/2;
+
+	output(z);
+
+}
+
+void vetor(void){
+	int cont; int aux; int i;
+	cont = 0;
+	aux = 0;
+
+	while (cont < 4){
+		vet[cont] = input();
+		cont = cont + 1;
+	}
+	cont = 0;
+	while (cont < 4){
+		aux = vet[cont] + aux;
+		cont = cont + 1;
+	}
+
+	output(aux);
+}
+
+
+void maior (void) {
+	int cont; int aux; int i;
+	cont = 0;
+	aux = 0;
+
+	while (cont < 4){
+		vet[cont] = input();
+		cont = cont + 1;
+	}
+	cont = 0;
+	aux = vet[0];
+	while (cont < 4){
+		if (vet[cont] > aux)
+			aux = vet[cont];
+
+		cont = cont + 1;
+	}
+	output(aux);
+
+}
+
+
+void pot(void){
+	int r;
+	int x;
+	int y;
+
+	x = input();
+	y = input();
+	r = 1;
+
+	while(y>0){
+		r=r*x;
+		y = y - 1;
+	}
+	output(r);
+}
+
+int fibo(void) {
+  int n;
+  int i;
+  int j;
+  int k;
+
+    i = 0;
+    j = 1;
+    k = 1;
+  n = input();
+
+  if(n == 0) return 1;
+  else if (n == 1) return 1;
+  else{
+
+
+	 while(k < n) {
+		int t;
+		t = i + j;
+		i = j;
+		j = t;
+        k = k + 1;
+     }
+
+	return j;
+	}
+
+}
+
+
+void main (void){
+  int i;
+	int x;
+	int y;
+
+  i = input();
+
+	if(i == 1) {
+		arit();
+	}
+	if(i == 2) {
+		comp();
+	}
+	if(i == 3){
+		media();
+	}
+	if(i == 4) {
+		vetor();
+	}
+	if(i == 5) {
+		maior(); 
+	}
+	if(i == 6) {
+		pot(); 
+	}
+	if(i == 7) {
+		output(fibo());
+	}	
+
+
+	
+
+}

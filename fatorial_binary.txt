@@ -1,0 +1,19 @@
+module MemoriaDeInstrucoes(	input [5:0] Endereco,
+		output [5:0] Opcode,
+		output [4:0] CampoA,
+		output [4:0] CampoB,
+		output [4:0] CampoC,
+		output [10:0] CampoD );
+
+	wire [31:0] Memoria [58:0];
+	wire [31:0] Instrucao;
+
+
+	assign Instrucao = Memoria[Endereco];
+	assign Opcode = Instrucao[31:26];
+	assign CampoA = Instrucao[25:21];
+	assign CampoB = Instrucao[20:16];
+	assign CampoC = Instrucao[15:11];
+	assign CampoD = Instrucao[10:0];
+
+endmodule

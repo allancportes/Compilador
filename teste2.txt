@@ -1,0 +1,30 @@
+int input(void)
+{
+}
+
+void output(int x)
+{
+}
+
+
+int fibonacci(int num)
+{
+   if(num==1)
+       return 1;
+   if(num==2)
+       return 1;
+   else
+       return fibonacci(num-1) + fibonacci(num-2); 
+}
+
+void main (void){
+  int i;
+	int x;
+	int y;
+	int z;
+	
+	x = input();
+	z = fibonacci(x);
+	output(z);
+
+}
